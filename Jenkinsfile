@@ -14,7 +14,6 @@ maven 'Maven-3.8.4'
                 sh "mvn clean package"
             }
         }
-        /*
         stage('SonarQube Report'){
             steps{
                 sh "mvn clean sonar:sonar"
@@ -25,7 +24,6 @@ maven 'Maven-3.8.4'
             sh "mvn clean deploy"
         }
     }
-    */
     stage('UploadAPP into Tomcat'){
         steps{
             sshagent(['23e59228-d05d-4f19-a234-07dc5d6f7b0f']) {
